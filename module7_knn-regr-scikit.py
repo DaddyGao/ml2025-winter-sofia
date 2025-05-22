@@ -26,6 +26,8 @@ def knn_regression_with_variance():
 			X_train[i] = x
 			y_train[i] = y
 
+		X_train = X_train.reshape(-1, 1)
+
 		variance_of_labels = np.var(y_train)
 		print(f"\nVariance of labels in the training dataset: {variance_of_labels:.4f}")
 
